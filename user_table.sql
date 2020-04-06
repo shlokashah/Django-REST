@@ -1,0 +1,1 @@
+SELECT * FROM foxmula.account_user;
