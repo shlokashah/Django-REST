@@ -10,7 +10,7 @@ from rest_framework.response import Response
 from rest_framework.authentication import TokenAuthentication
 # Create your views here.
 
-# /accounts/register/
+# /account/register/
 @api_view(['POST',])
 def registration_view(request):
 	if request.method == 'POST':  #checking if a valid request of type 'POST'
@@ -23,7 +23,7 @@ def registration_view(request):
 			data = serializer.errors
 			return Response({'error':data},content_type='application/json',status=500)
 
-# /accounts/user_details/
+# /account/user_details/
 @api_view(['GET',])
 def user_details(request):
 	user_id = request.query_params['id']  #fetching the user id using query parameters
